@@ -1,0 +1,489 @@
+@media (max-width: 479px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --font_size_title_small: 20px;
+        --font_size_title: 22px;
+        --font_size_title_big: 30px;
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header .mob_phone,
+    header .messengers a
+    {
+        width: 32px;
+        height: 21px;
+    }
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .page_head
+    {
+        padding-top: 16px;
+    }
+
+
+
+    .breadcrumbs
+    {
+        font-size: 10px;
+    }
+
+
+
+    .page_head .back .btn
+    {
+        font-size: 12px;
+
+        height: 32px;
+    }
+
+
+
+    .page_head .links a
+    {
+        font-size: 12px;
+    }
+
+
+
+    /*------------------
+        Form elements
+    ------------------*/
+    .form .label
+    {
+        font-size: 12px;
+    }
+
+
+    .form .checkbox
+    {
+        font-size: 10px;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block .table_wrap
+    {
+        overflow-x: auto;
+
+        width: calc(100% + var(--cont_padding) * 2);
+        margin-right: calc(var(--cont_padding) * -1);
+        margin-left: calc(var(--cont_padding) * -1);
+    }
+
+
+    .text_block table
+    {
+        width: 768px;
+    }
+
+
+    .text_block table th,
+    .text_block table td
+    {
+        padding: 12px var(--cont_padding);
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head .desc
+    {
+        font-size: 14px;
+    }
+
+
+
+    /*-----------------
+        Main slider
+    -----------------*/
+    .main_slider .data
+    {
+        min-height: 280px;
+    }
+
+
+    .main_slider .discount
+    {
+        height: 44px;
+    }
+
+
+    .main_slider .discount:before
+    {
+        left: calc(var(--cont_padding) * -2);
+    }
+
+
+    .main_slider .image img
+    {
+        object-position: 30% 50%;
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps .row
+    {
+        margin-left: 0;
+    }
+
+
+    .steps .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .steps .item
+    {
+        padding-left: 120px;
+
+        color: var(--text_color);
+    }
+
+
+    .steps .item .image
+    {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+
+        width: 100px;
+        height: 100px;
+        margin: auto 0;
+        padding: 0;
+    }
+
+
+    .steps .item .icon
+    {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        width: 100px;
+        height: 100px;
+        margin: auto 0;
+    }
+
+
+    .steps .item .info
+    {
+        position: static;
+        bottom: 0;
+
+        padding: 0;
+
+        gap: 8px;
+    }
+
+
+    .steps .item .desc
+    {
+        font-size: 12px;
+    }
+
+
+    .steps .item .btn
+    {
+        position: relative;
+        bottom: 0;
+        left: 0;
+
+        margin-top: 8px;
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info .data
+    {
+        gap: calc(var(--cont_padding) / 2);
+    }
+
+
+    .contacts_info .data .phone a
+    {
+        font-size: 14px;
+    }
+
+
+    .contacts_info .virtual_tour,
+    .contacts_info .map
+    {
+        min-height: 233px;
+    }
+
+
+    .contacts_info .virtual_tour .btn,
+    .contacts_info .map .btn
+    {
+        font-size: 12px;
+
+        gap: 8px;
+    }
+
+
+
+    /*--------------
+        Feedback
+    --------------*/
+    .feedback .sub_title
+    {
+        margin-top: 10px;
+    }
+
+
+
+    /*-------------
+        Reviews
+    -------------*/
+    .reviews .tabs .btn
+    {
+        width: calc(50% - 4px);
+        padding: 0 12px;
+    }
+
+
+
+    /*----------
+        Kits
+    ----------*/
+    .kits .row
+    {
+        margin-bottom: -28px;
+    }
+
+
+    .kits .row > *
+    {
+        margin-bottom: 28px;
+    }
+
+
+    .kits .item,
+    .kits .item .info
+    {
+        gap: 12px;
+    }
+
+
+    .kits .item .prices
+    {
+        justify-content: space-between;
+
+        gap: 0;
+    }
+
+
+    .kits .item .prices .sep
+    {
+        display: none;
+    }
+
+
+
+    /*----------------
+        About info
+    ----------------*/
+    .about_info .head .logo img
+    {
+        width: 165px;
+        height: 50px;
+    }
+
+
+    .about_info .head .sep
+    {
+        display: none;
+    }
+
+
+    .about_info .head .slogan
+    {
+        width: 100%;
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .tags
+    {
+        font-size: 12px;
+    }
+
+
+    .articles .tags a
+    {
+        padding: 6px 10px;
+    }
+
+
+
+    /*---------
+        Why
+    ---------*/
+    .why .item .icon
+    {
+        width: 48px;
+        height: 48px;
+    }
+
+
+    .why .item .icon + *
+    {
+        width: calc(100% -  68px);
+    }
+
+
+    .why .item .desc
+    {
+        font-size: 12px;
+    }
+
+
+
+    /*------------------
+        Product info
+    ------------------*/
+    .product_info .prices .link a
+    {
+        width: 100%;
+    }
+
+
+
+    .product_info .tabs .btn
+    {
+        font-size: 12px;
+
+        padding: 8px 12px;
+    }
+
+
+
+    /*--------------------
+        Product colors
+    --------------------*/
+    .product_colors .row > *
+    {
+        width: calc(33.333% - var(--cont_padding));
+    }
+
+
+    .product_colors .row > *:nth-child(4) ~ *
+    {
+        display: flex;
+    }
+
+
+    .product_colors .row > *:nth-child(6) ~ *
+    {
+        display: none;
+    }
+
+
+
+    /*---------------
+        Potfoltio
+    ---------------*/
+    .portfolio .grid
+    {
+        display: flex;
+        flex-direction: column;
+
+        gap: var(--cont_padding);
+    }
+
+
+    .portfolio .item.big .image
+    {
+        height: 164px;
+    }
+
+
+    .portfolio .item.big .info
+    {
+        padding: 16px;
+    }
+
+
+    .portfolio .item.big .name
+    {
+        font-size: 16px;
+    }
+
+
+
+    /*------------
+        Filter
+    ------------*/
+    #filter .checkbox div
+    {
+        font-size: 12px;
+    }
+
+
+    #filter .data .reset_btn
+    {
+        height: 36px;
+        margin-top: 8px;
+        padding: 0 12px;
+    }
+
+
+    #filter .btns .submit_btn
+    {
+        width: 100%;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer .contacts
+    {
+        justify-content: space-between;
+
+        gap: var(--cont_padding) 10px;
+    }
+
+
+    footer .order_btn
+    {
+        width: 100%;
+    }
+}

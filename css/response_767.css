@@ -1,0 +1,751 @@
+@media (max-width: 767px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --font_size_title_small: 22px;
+        --font_size_title: 26px;
+        --font_size_title_big: 34px;
+    }
+
+
+
+    .block.biggest_m
+    {
+        margin-bottom: 60px;
+    }
+
+
+
+    .swiper-button-next,
+    .swiper-button-prev
+    {
+        width: 32px;
+        height: 32px;
+    }
+
+
+    .swiper-button-next .icon,
+    .swiper-button-prev .icon
+    {
+        width: 8px;
+        height: 12px;
+    }
+
+
+    .swiper-pagination-bullet
+    {
+        width: 8px;
+        height: 8px;
+    }
+
+
+
+    .block .hor_line,
+    .block .hor_line.big_m
+    {
+        margin-bottom: var(--cont_padding);
+    }
+
+
+
+    /*----------------
+        Pagination
+    ----------------*/
+    .pagination .links a
+    {
+        width: 32px;
+        height: 32px;
+    }
+
+
+    .pagination .links a.prev
+    {
+        margin-right: 8px;
+    }
+
+
+    .pagination .links a.next
+    {
+        margin-left: 8px;
+    }
+
+
+    .pagination .links a.prev .icon,
+    .pagination .links a.next .icon
+    {
+        width: 8px;
+        height: 12px;
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header .logo img
+    {
+        width: 133px;
+        height: 40px;
+    }
+
+
+
+    header .mob_phone
+    {
+        margin-right: 4px;
+    }
+
+
+    header .mob_phone .icon
+    {
+        width: 20px;
+        height: 20px;
+    }
+
+
+
+    header .messengers
+    {
+        gap: 4px;
+    }
+
+
+    header .messengers .tg_link .icon
+    {
+        width: 21px;
+        height: 17px;
+    }
+
+
+    header .messengers .whatsapp_link .icon
+    {
+        width: 20px;
+        height: 19px;
+    }
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .page_head.block
+    {
+        margin-bottom: var(--cont_padding);
+    }
+
+
+
+    .page_head .back .btn
+    {
+        height: 36px;
+        padding: 0 12px;
+    }
+
+
+
+    .page_head .links a
+    {
+        padding: 8px 12px;
+    }
+
+
+
+    .page_head .row
+    {
+        flex-wrap: wrap;
+    }
+
+
+
+    /*------------------
+        Form elements
+    ------------------*/
+    .form .columns > *,
+    .form .columns > *.width1of3,
+    .form .columns > *.width2of3
+    {
+        width: calc(100% - var(--form_columns_offset));
+    }
+
+
+    .form .submit .agree
+    {
+        order: 3;
+
+        width: 100%;
+        max-width: 100%;
+        margin-top: 16px;
+    }
+
+
+    .form .submit_btn
+    {
+        width: 100%;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block .video_link .icon
+    {
+        width: 48px;
+        height: 48px;
+    }
+
+
+    .text_block table th,
+    .text_block table td
+    {
+        padding: 8px 12px;
+    }
+
+
+
+    /*-----------------
+        Main slider
+    -----------------*/
+    .main_slider .data
+    {
+        min-height: 300px;
+        padding: 40px var(--cont_padding);
+    }
+
+
+    .main_slider .discount
+    {
+        height: 48px;
+    }
+
+
+    .main_slider .discount:before
+    {
+        left: calc(var(--cont_padding) * -1);
+    }
+
+
+    .main_slider .image img
+    {
+        object-position: 33.333% 50%;
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps .item .image
+    {
+        padding-bottom: 133.333%;
+    }
+
+
+    .steps .item .info
+    {
+        bottom: calc(var(--cont_padding) * 2.5);
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info .data
+    {
+        width: 100%;
+    }
+
+
+    .contacts_info .data .order_btn
+    {
+        width: 100%;
+    }
+
+
+    .contacts_info .virtual_tour
+    {
+        width: 100%;
+        margin-top: var(--cont_padding);
+    }
+
+
+    .contacts_info .virtual_tour .btn,
+    .contacts_info .map .btn
+    {
+        font-size: 13px;
+
+        bottom: 16px;
+        left: 16px;
+
+        height: 36px;
+    }
+
+
+
+    /*--------------
+        Feedback
+    --------------*/
+    .feedback .data
+    {
+        padding: 28px var(--cont_padding);
+    }
+
+
+    .feedback .sub_title
+    {
+        font-size: 14px;
+    }
+
+
+    .feedback .form .agree
+    {
+        order: 3;
+
+        margin-top: 16px;
+    }
+
+
+
+    /*-------------
+        Reviews
+    -------------*/
+    .reviews .row
+    {
+        margin-left: 0;
+    }
+
+
+    .reviews .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+
+    /*-----------------
+        Order block
+    -----------------*/
+    .order_block .data
+    {
+        padding: calc(var(--cont_padding) * 3) var(--cont_padding) var(--cont_padding);
+    }
+
+
+
+    /*----------
+        Kits
+    ----------*/
+    .kits .row
+    {
+        margin-left: 0;
+    }
+
+
+    .kits .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .kits .item .images .swiper-button-prev
+    {
+        left: 12px;
+    }
+
+    .kits .item .images .swiper-button-next
+    {
+        right: 12px;
+    }
+
+
+    .kits .item .prices .label
+    {
+        font-size: 12px;
+    }
+
+
+
+    /*----------------
+        About info
+    ----------------*/
+    .about_info .head .logo img
+    {
+        width: 186px;
+        height: 56px;
+    }
+
+
+    .about_info .head .sep
+    {
+        min-height: 56px;
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .tags > *:nth-child(6) ~ *:not(.spoler_btn)
+    {
+        display: none;
+    }
+
+
+    .articles .tags .spoler_btn
+    {
+        margin-top: 0;
+    }
+
+
+    .articles .tags a
+    {
+        padding: 8px 12px;
+    }
+
+
+    .articles .row
+    {
+        margin-left: 0;
+    }
+
+
+    .articles .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .articles .swiper
+    {
+        padding-bottom: 28px;
+    }
+
+
+    .articles .swiper-button-next,
+    .articles .swiper-button-prev
+    {
+        margin-top: -16px;
+    }
+
+
+    .articles .swiper-button-prev
+    {
+        left: -16px;
+    }
+
+
+    .articles .swiper-button-next
+    {
+        right: -16px;
+    }
+
+
+
+    /*------------------
+        Article info
+    ------------------*/
+    .article_info .share
+    {
+        width: 100%;
+    }
+
+
+
+    /*---------------
+        Potfoltio
+    ---------------*/
+    .portfolio .row
+    {
+        margin-left: 0;
+    }
+
+
+    .portfolio .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .portfolio .grid
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .portfolio .item.big .image
+    {
+        height: 280px;
+    }
+
+
+
+    /*------------------
+        Product info
+    ------------------*/
+    .product_info .prices
+    {
+        margin-bottom: var(--cont_padding);
+
+        gap: 16px;
+    }
+
+
+    .product_info .prices .sep
+    {
+        display: none;
+    }
+
+
+    .product_info .prices > *
+    {
+        width: 100%;
+
+        gap: 4px;
+    }
+
+
+    .product_info .prices .exp
+    {
+        font-size: 12px;
+    }
+
+
+    .product_info .prices .link
+    {
+        margin-top: 4px;
+    }
+
+
+    .product_info .images .swiper-slide
+    {
+        width: calc(100vw - var(--cont_padding) * 2 - var(--cont_padding));
+    }
+
+
+    .product_info .images .swiper-button-next,
+    .product_info .images .swiper-button-prev
+    {
+        display: none;
+    }
+
+
+
+    .product_info .features .list
+    {
+        gap: 10px;
+    }
+
+
+
+    /*--------------------
+        Product colors
+    --------------------*/
+    .product_colors .row > *
+    {
+        width: calc(25% - var(--cont_padding));
+    }
+
+
+    .product_colors .row > *:nth-child(4) ~ *
+    {
+        display: none;
+    }
+
+
+
+    /*----------------
+        Categories
+    ----------------*/
+    .categories .row
+    {
+        margin-left: 0;
+    }
+
+
+    .categories .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+
+    /*------------
+        Filter
+    ------------*/
+    #filter .scroll
+    {
+        height: calc(100vh - 177px);
+    }
+
+
+    #filter .btns
+    {
+        margin-top: var(--cont_padding);
+    }
+
+
+
+    /*--------------------
+        Portfolio item
+    --------------------*/
+    .portfolio_item .images .swiper-slide
+    {
+        width: calc(100vw - var(--cont_padding) * 2 - var(--cont_padding));
+    }
+
+
+    .portfolio_item .images .swiper-button-next,
+    .portfolio_item .images .swiper-button-prev
+    {
+        display: none;
+    }
+
+
+
+    .portfolio_item .features .list
+    {
+        gap: 10px;
+    }
+
+
+    .portfolio_item .features .list > *
+    {
+        align-content: flex-end;
+        align-items: flex-end;
+    }
+
+
+    .portfolio_item .features .dots
+    {
+        margin-top: 0;
+        margin-bottom: 4px;
+    }
+
+
+    .portfolio_item .features .val
+    {
+        white-space: normal;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer .data
+    {
+        margin-bottom: 0;
+    }
+
+
+
+    footer .logo img
+    {
+        width: 133px;
+        height: 40px;
+    }
+
+
+
+    footer .menu .col + .col,
+    footer .menu .item + .item
+    {
+        border-top: 1px solid #e4e5e6;
+    }
+
+
+    footer .menu .item
+    {
+        gap: 0;
+    }
+
+
+    footer .menu .title
+    {
+        padding: 16px 0;
+
+        pointer-events: auto;
+    }
+
+
+    footer .menu .title .arr
+    {
+        display: block;
+    }
+
+
+    footer .menu .col
+    {
+        width: 100%;
+
+        gap: 0;
+    }
+
+
+    footer .menu .items
+    {
+        display: none;
+
+        padding-bottom: 17px;
+
+        gap: calc(var(--cont_padding) / 2);
+    }
+
+
+    footer .menu .items.show
+    {
+        display: flex;
+    }
+
+
+
+    footer .hor_line
+    {
+        width: calc(100% + var(--cont_padding) * 2);
+        margin-right: calc(var(--cont_padding) * -1);
+        margin-left: calc(var(--cont_padding) * -1);
+    }
+
+
+
+    footer .bottom
+    {
+        font-size: 10px;
+        line-height: 140%;
+
+        flex-direction: column;
+
+        gap: calc(var(--cont_padding) / 2);
+    }
+
+
+
+    footer .copyright
+    {
+        margin-bottom: 0;
+    }
+
+
+
+    footer .email br ~ br
+    {
+        display: none;
+    }
+
+
+
+    footer .text
+    {
+        font-size: 10px;
+        line-height: 140%;
+    }
+}
