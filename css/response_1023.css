@@ -704,6 +704,45 @@
 
 
 
+    .filters .mini_modal
+    {
+        width: 380px;
+    }
+
+
+    .filters .mini_modal .close_btn
+    {
+        top: 20px;
+        right: 16px;
+    }
+
+
+    .filters .mini_modal .title
+    {
+        font-size: 16px;
+    }
+
+
+    .filters .mini_modal .checkbox div
+    {
+        font-size: 13px;
+    }
+
+
+    .filters .mini_modal .btns .reset_btn
+    {
+        height: 40px;
+    }
+
+
+    .filters .mini_modal .btns .submit_btn
+    {
+        height: 40px;
+        padding: 0 19px;
+    }
+
+
+
     /*----------------
         Categories
     ----------------*/

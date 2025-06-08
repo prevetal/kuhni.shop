@@ -155,6 +155,89 @@
 				</header>
 
 
+				<section id="mob_menu">
+					<div class="cont">
+						<div class="head">
+							<form action="" class="search">
+								<input type="text" name="" value="" class="input" placeholder="Найти кухню...">
+
+								<button type="submit" class="submit_btn">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_search"></use></svg>
+								</button>
+							</form>
+
+							<button class="close_btn">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+							</button>
+						</div>
+
+						<div class="catalog_links">
+							<div><a href="/">Современные кухни</a></div>
+
+							<div><a href="/">Классические кухни</a></div>
+
+							<div><a href="/">Кухни неоклассика</a></div>
+
+							<div><a href="/">Шкафы</a></div>
+
+							<div><a href="/">Мебель для ванных</a></div>
+
+							<div><a href="/">Технологии</a></div>
+
+							<div><a href="/">Преимущества</a></div>
+						</div>
+
+						<div class="menu">
+							<div class="col">
+								<div><a href="/">Преимущества</a></div>
+
+								<div><a href="/">Портфолио</a></div>
+
+								<div><a href="/">Отзывы</a></div>
+
+								<div><a href="/">Блог</a></div>
+
+								<div><a href="/">Мебель для ванных</a></div>
+
+								<div><a href="/">Размеры и компоновки</a></div>
+							</div>
+
+							<div class="col">
+								<div><a href="/">Оплата</a></div>
+
+								<div><a href="/">Установка</a></div>
+
+								<div><a href="/">Гарантии</a></div>
+
+								<div><a href="/">О нас</a></div>
+
+								<div><a href="/">Контакты</a></div>
+							</div>
+						</div>
+
+						<div class="contacts">
+							<div class="phone">
+								<div><a href="tel:8 (800) 925-24-75">8 (800) 925-24-75</a></div>
+
+								<div class="exp">по России бесплатно</div>
+							</div>
+
+							<div class="messengers">
+								<a href="/" target="_blank" rel="noopener nofollow" class="tg_link">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_tg"></use></svg>
+								</a>
+
+								<a href="/" target="_blank" rel="noopener nofollow" class="whatsapp_link">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_whatsapp"></use></svg>
+								</a>
+							</div>
+
+							<button class="order_btn modal_btn" data-modal="order_modal">Заказать кухню</button>
+						</div>
+					</div>
+				</section>
+
+
 				<section class="page_head block">
 					<div class="cont">
 						<div class="breadcrumbs">
@@ -178,29 +261,138 @@
 								<span>Все фильтры</span>
 							</button>
 
-							<button class="btn">
-								<svg class="icon"><use xlink:href="images/sprite.svg#ic_filter_material"></use></svg>
-								<span>Материалы</span>
-								<svg class="arr"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
-							</button>
+							<div class="modal_cont">
+								<button class="btn mini_modal_btn" data-modal-id="#filters_modal1">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_filter_material"></use></svg>
+									<span>Материалы</span>
+									<svg class="arr"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+								</button>
 
-							<button class="btn">
-								<svg class="icon"><use xlink:href="images/sprite.svg#ic_filter_size"></use></svg>
-								<span>Рамзер</span>
-								<svg class="arr"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
-							</button>
+								<div class="mini_modal" id="filters_modal1">
+									<button class="close_btn">
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+									</button>
 
-							<button class="btn">
-								<svg class="icon"><use xlink:href="images/sprite.svg#ic_filter_style"></use></svg>
-								<span>Стиль</span>
-								<svg class="arr"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
-							</button>
+									<div class="title">Материалы</div>
 
-							<button class="btn">
-								<svg class="icon w2x"><use xlink:href="images/sprite.svg#ic_filter_color"></use></svg>
-								<span>Цвет</span>
-								<svg class="arr"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
-							</button>
+									<div class="row">
+										<label class="checkbox">
+											<input type="checkbox" name="group" checked>
+											<div>Классический</div>
+										</label>
+
+										<label class="checkbox">
+											<input type="checkbox" name="group">
+											<div>Барокко</div>
+										</label>
+
+										<label class="checkbox">
+											<input type="checkbox" name="group">
+											<div>Кантри</div>
+										</label>
+
+										<label class="checkbox">
+											<input type="checkbox" name="group">
+											<div>Лофт</div>
+										</label>
+
+										<label class="checkbox">
+											<input type="checkbox" name="group">
+											<div>Современный</div>
+										</label>
+
+										<label class="checkbox">
+											<input type="checkbox" name="group">
+											<div>Прованс</div>
+										</label>
+
+										<label class="checkbox">
+											<input type="checkbox" name="group" checked>
+											<div>Классический</div>
+										</label>
+
+										<label class="checkbox">
+											<input type="checkbox" name="group">
+											<div>Классический</div>
+										</label>
+
+										<label class="checkbox">
+											<input type="checkbox" name="group">
+											<div>Барокко</div>
+										</label>
+
+										<label class="checkbox">
+											<input type="checkbox" name="group">
+											<div>Кантри</div>
+										</label>
+
+										<label class="checkbox">
+											<input type="checkbox" name="group">
+											<div>Лофт</div>
+										</label>
+
+										<label class="checkbox">
+											<input type="checkbox" name="group">
+											<div>Современный</div>
+										</label>
+
+										<label class="checkbox">
+											<input type="checkbox" name="group">
+											<div>Прованс</div>
+										</label>
+
+										<label class="checkbox">
+											<input type="checkbox" name="group">
+											<div>Классический</div>
+										</label>
+									</div>
+
+									<div class="btns">
+										<button type="reset" class="reset_btn">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_reset"></use></svg>
+											<span>Сбросить</span>
+										</button>
+
+										<button type="submit" class="submit_btn">Применить</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="modal_cont">
+								<button class="btn mini_modal_btn" data-modal-id="#filters_modal2">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_filter_size"></use></svg>
+									<span>Рамзер</span>
+									<svg class="arr"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+								</button>
+
+								<div class="mini_modal" id="filters_modal2">
+
+								</div>
+							</div>
+
+							<div class="modal_cont">
+								<button class="btn mini_modal_btn" data-modal-id="#filters_modal3">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_filter_style"></use></svg>
+									<span>Стиль</span>
+									<svg class="arr"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+								</button>
+
+								<div class="mini_modal" id="filters_modal3">
+
+								</div>
+							</div>
+
+							<div class="modal_cont">
+								<button class="btn mini_modal_btn" data-modal-id="#filters_modal4">
+									<svg class="icon w2x"><use xlink:href="images/sprite.svg#ic_filter_color"></use></svg>
+									<span>Цвет</span>
+									<svg class="arr"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+								</button>
+
+								<div class="mini_modal" id="filters_modal4">
+
+								</div>
+							</div>
 						</div>
 
 						<div class="text_block">

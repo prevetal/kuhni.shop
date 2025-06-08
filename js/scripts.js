@@ -261,6 +261,16 @@ document.addEventListener('DOMContentLoaded', function() {
 	})
 
 
+	// Close the popup when you click on the cross in the popup
+	$('.mini_modal .close_btn').click(e => {
+		e.preventDefault()
+
+		$('.mini_modal, .mini_modal_btn').removeClass('active')
+
+		if (is_touch_device()) $('body').css('cursor', 'default')
+	})
+
+
 	// Tabs
 	var locationHash = window.location.hash
 
@@ -447,6 +457,16 @@ document.addEventListener('DOMContentLoaded', function() {
 		$('.overlay').fadeIn(300)
 	})
 
+
+	$('.filters .mini_modal .reset_btn').click(function(e) {
+		e.preventDefault()
+
+		const section = $(this).closest('.mini_modal')
+
+		section.find('input').prop('checked', false)
+	})
+
+
 	$('#filter .name').click(function(e) {
 		e.preventDefault()
 
@@ -457,6 +477,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			: $(this).next().slideUp(300)
 	})
 
+
 	$('#filter .data .reset_btn').click(function(e) {
 		e.preventDefault()
 
@@ -464,6 +485,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		section.find('input').prop('checked', false)
 	})
+
 
 	$('#filter .close_btn, .overlay').click(function(e) {
 		e.preventDefault()
@@ -527,6 +549,23 @@ document.addEventListener('DOMContentLoaded', function() {
 		$(this).hasClass('active')
 			? $(this).next().addClass('show')
 			: $(this).next().removeClass('show')
+	})
+
+
+	// Mob. menu
+	$('.mob_menu_btn').click(function(e) {
+		e.preventDefault()
+
+		$('body').addClass('lock')
+		$('#mob_menu').addClass('show')
+	})
+
+
+	$('#mob_menu .close_btn').click(function(e) {
+		e.preventDefault()
+
+		$('body').removeClass('lock')
+		$('#mob_menu').removeClass('show')
 	})
 })
 

@@ -1182,6 +1182,62 @@
     }
 
 
+    .filters .mini_modal
+    {
+        width: 400px;
+        padding: var(--cont_padding);
+    }
+
+
+    .filters .mini_modal .close_btn
+    {
+        top: 23px;
+        right: 17px;
+
+        width: var(--cont_padding);
+        height: var(--cont_padding);
+    }
+
+
+    .filters .mini_modal .title
+    {
+        font-size: 18px;
+
+        margin-bottom: var(--cont_padding);
+    }
+
+
+    .filters .mini_modal .row
+    {
+        gap: 8px;
+    }
+
+
+    .filters .mini_modal .checkbox div
+    {
+        padding: 8px 12px;
+    }
+
+
+    .filters .mini_modal .btns
+    {
+        margin-top: var(--cont_padding);
+    }
+
+
+    .filters .mini_modal .btns .reset_btn
+    {
+        height: 44px;
+    }
+
+
+    .filters .mini_modal .btns .submit_btn
+    {
+        height: 44px;
+        padding: 0 23px;
+    }
+
+
 
     /*------------------
         Catalog info

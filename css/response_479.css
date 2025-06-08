@@ -416,6 +416,16 @@
 
 
 
+    /*-------------
+        Filters
+    -------------*/
+    .filters .mini_modal .checkbox div
+    {
+        font-size: 12px;
+    }
+
+
+
     /*---------------
         Potfoltio
     ---------------*/
