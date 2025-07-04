@@ -5987,6 +5987,199 @@ header .mob_menu_btn .icon
 
 
 
+/*--------------
+    Base kit
+--------------*/
+#base_kit
+{
+    position: fixed;
+    z-index: 102;
+    top: 0;
+    left: 100%;
+
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+
+    width: 600px;
+    max-width: 100%;
+    height: 100%;
+    padding: 42px 50px 45px;
+
+    transition: .35s linear;
+
+    background: var(--bg);
+
+    gap: 26px;
+    overscroll-behavior-y: contain;
+}
+
+
+#base_kit.show
+{
+    transform: translateX(-100%);
+
+    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, .10);
+}
+
+
+#base_kit > .close_btn
+{
+    position: absolute;
+    z-index: 5;
+    top: 41px;
+    right: 41px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+}
+
+
+#base_kit > .close_btn .icon
+{
+    display: block;
+
+    width: 14px;
+    height: 14px;
+}
+
+
+#base_kit .title
+{
+    font-size: var(--font_size_title_small);
+    font-weight: 700;
+    line-height: 130%;
+}
+
+
+#base_kit .product
+{
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+#base_kit .product .name
+{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+
+#base_kit .product .thumb
+{
+    display: block;
+
+    width: 320px;
+    max-width: 100%;
+
+    border-radius: 10px;
+}
+
+
+#base_kit .product .thumb img
+{
+    display: block;
+
+    width: 100%;
+
+    border-radius: inherit;
+}
+
+
+#base_kit .product .btn
+{
+    font-weight: 700;
+
+    width: 320px;
+    max-width: 100%;
+    margin-top: 5px;
+    padding: 14px 20px;
+
+    color: #fff;
+    border-radius: 10px;
+    background: var(--accent_color);
+}
+
+
+#base_kit .included
+{
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 9px;
+
+    gap: 19px;
+}
+
+
+#base_kit .included .label
+{
+    font-weight: 700;
+    line-height: 130%;
+}
+
+
+#base_kit .included .items
+{
+    line-height: 150%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+#base_kit .included .items > *
+{
+    position: relative;
+
+    padding-left: 21px;
+}
+
+
+#base_kit .included .items > *:before
+{
+    position: absolute;
+    top: .5lh;
+    left: 0;
+
+    display: block;
+
+    width: 6px;
+    height: 6px;
+
+    content: '';
+    transform: translateY(-50%);
+
+    border-radius: 2px;
+    background: currentColor;
+}
+
+
+#base_kit .exp
+{
+    font-size: 12px;
+    line-height: 150%;
+
+    margin-top: auto;
+    padding-top: 35px;
+
+    color: #9e9fa0;
+}
+
+
+
 /*------------------
     Product info
 ------------------*/

@@ -594,6 +594,24 @@ document.addEventListener('DOMContentLoaded', function() {
 		$('body').removeClass('lock')
 		$('#mob_menu').removeClass('show')
 	})
+
+
+	// Base kit
+	$('.product_info .base_kit_btn').click(function(e) {
+		e.preventDefault()
+
+		$('body').addClass('lock')
+		$('#base_kit').addClass('show')
+		$('.overlay').fadeIn(300)
+	})
+
+	$('#base_kit .close_btn, .overlay').click(function(e) {
+		e.preventDefault()
+
+		$('body').removeClass('lock')
+		$('#base_kit').removeClass('show')
+		$('.overlay').fadeOut(200)
+	})
 })
 
 
