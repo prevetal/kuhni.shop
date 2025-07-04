@@ -46,7 +46,7 @@
     .block .hor_line,
     .block .hor_line.big_m
     {
-        margin-bottom: var(--cont_padding);
+        margin-bottom: var(--cont_padding2);
     }
 
 
@@ -550,7 +550,7 @@
     --------------------*/
     .product_colors .row > *
     {
-        width: calc(25% - var(--cont_padding));
+        width: calc(50% - var(--cont_padding));
     }
 
 

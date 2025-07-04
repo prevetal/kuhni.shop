@@ -1088,7 +1088,7 @@
 
     .product_info .images .swiper-slide
     {
-        width: 800px;
+        /*width: 800px;*/
     }
 
 
@@ -1146,13 +1146,13 @@
 
     .product_colors .row > *
     {
-        width: calc(16.666% - var(--cont_padding));
+        width: calc(25% - var(--cont_padding));
         margin-bottom: var(--cont_padding);
         margin-left: var(--cont_padding);
     }
 
 
-    .product_colors .row > *:nth-child(6) ~ *
+    .product_colors .row > *:nth-child(4) ~ *
     {
         display: none;
     }
@@ -1262,7 +1262,7 @@
     .categories .row > *
     {
         width: calc(50% - var(--cont_padding));
-        margin-bottom: 32px;
+        margin-bottom: 35px;
         margin-left: var(--cont_padding);
     }
 
@@ -1421,7 +1421,7 @@
 
     .portfolio_item .images .swiper-slide
     {
-        width: 800px;
+        /*width: 800px;*/
     }
 
 

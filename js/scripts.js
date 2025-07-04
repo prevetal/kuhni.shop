@@ -31,6 +31,32 @@ document.addEventListener('DOMContentLoaded', function() {
 		})
 	}
 
+	let tagSlider = document.querySelector('.tags .swiper')
+
+	if (tagSlider) {
+		new Swiper('.tags .swiper', {
+			/*loop: true,*/
+			speed: 750,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			spaceBetween: 10,
+			slidesPerView: 'auto',
+			/*loopAdditionalSlides: 1,*/
+			/*pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+				bulletActiveClass: 'active'
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},*/
+			lazy: true
+		})
+	}
+
 
 	// Category images slider
 	const categoryImagesSliders = [],
@@ -281,11 +307,12 @@ document.addEventListener('DOMContentLoaded', function() {
 			let parent = $(this).closest('.tabs_container'),
 				activeTab = $(this).data('content'),
 				activeTabContent = $(activeTab),
-				level = $(this).data('level')
+				level = $(this).data('level'),
+				color = $(this).data("name");
 
 			parent.find('.tabs:first .btn').removeClass('active')
 			parent.find('.tab_content.' + level).removeClass('active')
-
+			$(".js-color").text(color);
 			$(this).addClass('active')
 			activeTabContent.addClass('active')
 		}
@@ -320,7 +347,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	Fancybox.defaults.tpl = {
-		closeButton: '<button data-fancybox-close class="f-button is-close-btn" title="{{CLOSE}}"><svg><use xlink:href="images/sprite.svg#ic_close_small"></use></svg></button>',
+		closeButton: '<button data-fancybox-close class="f-button is-close-btn" title="{{CLOSE}}"><svg><use xlink:href="https://kuhni.shop/wp-content/themes/raten/images/sprite.svg#ic_close_small"></use></svg></button>',
 
 		main: `<div class="fancybox__container" role="dialog" aria-modal="true" aria-label="{{MODAL}}" tabindex="-1">
 			<div class="fancybox__backdrop"></div>
@@ -418,7 +445,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	if (fileInputs) {
 		fileInputs.forEach(el => {
-			el.addEventListener('change', () => el.closest('.file').querySelector('label span').innerText = el.value)
+			el.addEventListener('change', () => el.closest('.file').querySelector('label div span').innerText = el.value)
 		})
 	}
 

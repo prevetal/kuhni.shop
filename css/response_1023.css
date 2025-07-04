@@ -7,13 +7,17 @@
     :root
     {
         --cont_padding: 20px;
+        --cont_padding2: 30px;
         --font_size: 14px;
         --font_size_title_small: 24px;
         --font_size_title: 28px;
         --font_size_title_big: 38px;
     }
 
-
+    .wrap
+    {
+        margin-top: 84px;
+    }
 
     .block.big_m
     {
@@ -668,11 +672,11 @@
     --------------------*/
     .product_colors .row > *
     {
-        width: calc(20% - var(--cont_padding));
+        width: calc(25% - var(--cont_padding));
     }
 
 
-    .product_colors .row > *:nth-child(5) ~ *
+    .product_colors .row > *:nth-child(4) ~ *
     {
         display: none;
     }
@@ -760,11 +764,11 @@
 
     .categories .category .price .btn
     {
-        font-size: 13px;
+        font-size: 10px;
 
-        width: 88px;
+        width: 101px;
 
-        text-align: left;
+        text-align: center;
     }
 
 

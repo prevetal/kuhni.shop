@@ -6,7 +6,7 @@
     :root
     {
         --font_size_title_small: 20px;
-        --font_size_title: 22px;
+        --font_size_title: 26px;
         --font_size_title_big: 30px;
     }
 
@@ -88,7 +88,7 @@
 
     .text_block table
     {
-        width: 768px;
+        width: 768px !important;
     }
 
 
@@ -387,9 +387,9 @@
 
     .product_info .tabs .btn
     {
-        font-size: 12px;
+        /*font-size: 12px;
 
-        padding: 8px 12px;
+        padding: 8px 12px;*/
     }
 
 
@@ -399,17 +399,17 @@
     --------------------*/
     .product_colors .row > *
     {
-        width: calc(33.333% - var(--cont_padding));
+        width: calc(50% - var(--cont_padding));
     }
+
+
+    /*.product_colors .row > *:nth-child(4) ~ *
+    {
+        display: flex;
+    }*/
 
 
     .product_colors .row > *:nth-child(4) ~ *
-    {
-        display: flex;
-    }
-
-
-    .product_colors .row > *:nth-child(6) ~ *
     {
         display: none;
     }
@@ -495,5 +495,15 @@
     footer .order_btn
     {
         width: 100%;
+    }
+
+    .product_info .name_color
+    {
+        margin-bottom: 30px;
+    }
+
+    .tags
+    {
+        margin-bottom: 30px;
     }
 }
