@@ -54,7 +54,7 @@
     /*----------------
         Pagination
     ----------------*/
-    .pagination .links a
+    .pagination .links a, .pagination .links span
     {
         width: 32px;
         height: 32px;
@@ -605,12 +605,14 @@
     #filter .scroll
     {
         height: calc(100vh - 177px);
+        height: calc(100vh - 100px);
     }
 
 
     #filter .btns
     {
         margin-top: var(--cont_padding);
+        margin-top: auto;
     }
 
 
@@ -619,6 +621,14 @@
         Base kit
     --------------*/
     #base_kit
+    {
+        width: calc(100% - var(--cont_padding) * 2);
+    }
+
+    /*--------------
+        Base kit
+    --------------*/
+    #credit_kit
     {
         width: calc(100% - var(--cont_padding) * 2);
     }

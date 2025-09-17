@@ -48,11 +48,11 @@ document.addEventListener('DOMContentLoaded', function() {
 				type: 'bullets',
 				clickable: true,
 				bulletActiveClass: 'active'
-			},
+			},*/
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
-			},*/
+			},
 			lazy: true
 		})
 	}
@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 	// Product info slider
-	const productInfoSliders = [],
+	/*const productInfoSliders = [],
 		productInfoSlider = document.querySelectorAll('.product_info .images .swiper')
 
 	productInfoSlider.forEach((el, i) => {
@@ -251,7 +251,79 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 
 		productInfoSliders.push(new Swiper('.product_info_s' + i, options))
-	})
+	})*/
+
+	const productInfoSliders = [];
+	const productThumbsSliders = []; // Массив для хранения всех слайдеров-превью
+
+	const productInfoMainSliders = document.querySelectorAll('.product_info .images .swiper'); // Изменим класс, чтобы было понятно, что это основной слайдер
+	const productInfoThumbSliders = document.querySelectorAll('.product_info .thumbs .swiper'); // Класс для слайдеров-превью
+
+	productInfoMainSliders.forEach((mainEl, i) => {
+	    // Добавляем уникальный класс основному слайдеру
+	    mainEl.classList.add('product_info_main_s' + i);
+
+	    // Добавляем уникальный класс соответствующему слайдеру-превью
+	    // Предполагаем, что порядок productInfoThumbSliders соответствует productInfoMainSliders
+	    const thumbEl = productInfoThumbSliders[i];
+	    if (thumbEl) { // Проверяем, что элемент превью существует
+	        thumbEl.classList.add('product_info_thumb_s' + i);
+
+	        // 1. Создаем слайдер-превью для текущего блока
+	        let productThumbs = new Swiper('.product_info_thumb_s' + i, {
+	            /*loop: true,*/
+	            speed: 500,
+	            direction: 'vertical',
+	            watchSlidesProgress: true,
+	            slideActiveClass: 'active',
+	            slideVisibleClass: 'visible',
+	            lazy: true,
+	            spaceBetween: 20,	            
+	            slidesPerView: 'auto',
+	        });
+	        productThumbsSliders.push(productThumbs); // Добавляем в массив, если нужно будет ссылаться на них позже
+	    }
+
+
+	    // 2. Определяем опции для основного слайдера
+	    let options = {
+	        loop: true,
+	        loopAdditionalSlides: 1,
+	        speed: 500,
+	        watchSlidesProgress: true,
+	        slideActiveClass: 'active',
+	        slideVisibleClass: 'visible',
+	        navigation: {
+	            nextEl: '.swiper-button-next', // Убедитесь, что кнопки навигации уникальны для каждого блока
+	            prevEl: '.swiper-button-prev'
+	        },
+	        lazy: true,
+	        slidesPerView: 'auto',
+	        breakpoints: {
+	            0: {
+	                spaceBetween: 20
+	            },
+	            1024: {
+	                spaceBetween: 24
+	            },
+	            1280: {
+	                spaceBetween: 30
+	            }
+	        }
+	    };
+
+	    // Добавляем thumbs, связывая с только что созданным слайдером-превью
+	    if (productThumbsSliders[i]) { // Проверяем, что слайдер-превью был создан
+	        options.thumbs = {
+	            swiper: productThumbsSliders[i]
+	        };
+	    }
+
+
+	    // 3. Создаем основной слайдер
+	    productInfoSliders.push(new Swiper('.product_info_main_s' + i, options));
+	});
+
 
 
 	// Mini popups
@@ -310,10 +382,12 @@ document.addEventListener('DOMContentLoaded', function() {
 				level = $(this).data('level'),
 				color = $(this).data("name");
 
-			parent.find('.tabs:first .btn').removeClass('active')
+			parent.find('.tabs .btn').removeClass('active')
 			parent.find('.tab_content.' + level).removeClass('active')
 			$(".js-color").text(color);
 			$(this).addClass('active')
+			let escapedActiveTab = activeTab.replace(/#/g, '\\#');
+        	$("button[data-content='"+escapedActiveTab+"']").addClass('active'); 
 			activeTabContent.addClass('active')
 		}
 	})
@@ -324,7 +398,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			parent = activeTab.closest('.tabs_container'),
 			level = activeTab.data('level')
 
-		parent.find('.tabs:first .btn').removeClass('active')
+		parent.find('.tabs .btn').removeClass('active')
 		parent.find('.tab_content.' + level).removeClass('active')
 
 		activeTab.addClass('active')
@@ -441,13 +515,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 	// Select file
-	const fileInputs = document.querySelectorAll('form input[type=file]')
+	/*const fileInputs = document.querySelectorAll('form input[type=file]')
 
 	if (fileInputs) {
 		fileInputs.forEach(el => {
 			el.addEventListener('change', () => el.closest('.file').querySelector('label div span').innerText = el.value)
 		})
-	}
+	}*/
 
 
 	// Tags
@@ -482,6 +556,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		$('#filter').addClass('show')
 		$('.overlay').fadeIn(300)
+		$('body').toggleClass('lock')
 	})
 
 
@@ -513,12 +588,22 @@ document.addEventListener('DOMContentLoaded', function() {
 		section.find('input').prop('checked', false)
 	})
 
+	$('.filters .reset_btn').click(function(e) {
+		e.preventDefault()
+
+		const section = $(this).closest('.filters')
+
+		section.find('input').prop('checked', false)
+		$(this).closest('.filters').submit();
+	})
+
 
 	$('#filter .close_btn, .overlay').click(function(e) {
 		e.preventDefault()
 
 		$('#filter').removeClass('show')
 		$('.overlay').fadeOut(200)
+		$('body').toggleClass('lock')
 	})
 
 
@@ -610,6 +695,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		$('body').removeClass('lock')
 		$('#base_kit').removeClass('show')
+		$('.overlay').fadeOut(200)
+	})
+
+	// Base kit
+	$('.product_info .credit_btn').click(function(e) {
+		e.preventDefault()
+
+		$('body').addClass('lock')
+		$('#credit_kit').addClass('show')
+		$('.overlay').fadeIn(300)
+	})
+
+	$('#credit_kit .close_btn, .overlay').click(function(e) {
+		e.preventDefault()
+
+		$('body').removeClass('lock')
+		$('#credit_kit').removeClass('show')
 		$('.overlay').fadeOut(200)
 	})
 })

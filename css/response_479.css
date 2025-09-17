@@ -462,7 +462,7 @@
     ------------*/
     #filter .checkbox div
     {
-        font-size: 12px;
+        /*font-size: 12px;*/
     }
 
 
@@ -491,6 +491,17 @@
         padding-top: 0;
     }
 
+    /*--------------
+        Base kit
+    --------------*/
+    #credit_kit .exp
+    {
+        font-size: 11px;
+
+        padding-top: 0;
+    }
+
+
 
 
     /*------------
@@ -514,8 +525,46 @@
         margin-bottom: 30px;
     }
 
-    .tags
+    .product_info .tags
     {
         margin-bottom: 30px;
+    }
+
+    .product_info .images .swiper-slide .icon{
+        width: 30px;
+        height: 30px;
+        left: calc(50% - 15px);
+    }
+
+    .filters .modal_cont{
+    	display: none;
+    }
+
+    .filters .btn.all_btn{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        color: #1c1d1e;
+        background: #ffffff;
+    }
+
+    #filter .checkbox:has(div.color){
+    	width: calc(50% - 5px);
+    }
+
+    .filters .btns .submit_btn{
+        display: none;
+    }
+
+    #filter .data .row:has(.color){
+        max-height: 390px;
+        overflow: auto;
+        scrollbar-width: thin; /* 'auto' | 'thin' | 'none' */
+        scrollbar-color: #C6C7C8 #F4F5F6; /* цвет ползунка цвет_дорожки */
+        padding-right: 10px;
+    }
+
+    .filters .btns .reset_btn{
+        display: none;
     }
 }

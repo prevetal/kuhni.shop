@@ -40,7 +40,7 @@
     }
 
 
-    .pagination .links a
+    .pagination .links a, .pagination .links span
     {
         width: 40px;
         height: 40px;
@@ -745,6 +745,12 @@
         padding: 0 19px;
     }
 
+    .filters .btns .submit_btn
+    {
+        height: 40px;
+        padding: 0 19px;
+    }
+
 
 
     /*----------------
@@ -847,6 +853,15 @@
         width: 480px;
     }
 
+    /*--------------
+        Base kit
+    --------------*/
+    #credit_kit
+    {
+        width: 480px;
+    }
+
+
 
 
     /*--------------------
@@ -946,5 +961,13 @@
     {
         width: 100%;
         margin-bottom: var(--cont_padding);
+    }
+
+    .slider_with_thumbnail .thumbs{
+        display: none;
+    }
+
+    .filters .btns .reset_btn{
+        height: 40px;
     }
 }
