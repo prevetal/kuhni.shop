@@ -278,7 +278,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	            slideActiveClass: 'active',
 	            slideVisibleClass: 'visible',
 	            lazy: true,
-	            spaceBetween: 20,	            
+	            spaceBetween: 20,
 	            slidesPerView: 'auto',
 	        });
 	        productThumbsSliders.push(productThumbs); // Добавляем в массив, если нужно будет ссылаться на них позже
@@ -324,6 +324,109 @@ document.addEventListener('DOMContentLoaded', function() {
 	    productInfoSliders.push(new Swiper('.product_info_main_s' + i, options));
 	});
 
+
+	// Gallery slider
+	const gallerySliders = [],
+		gallery = document.querySelectorAll('.gallery_slider .swiper')
+
+	gallery.forEach((el, i) => {
+		el.classList.add('gallery_s' + i)
+
+		let options = {
+			loop: true,
+			loopAdditionalSlides: 1,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			lazy: true,
+			breakpoints: {
+				0: {
+					spaceBetween: 20,
+					slidesPerView: 'auto'
+				},
+				768: {
+					spaceBetween: 20,
+					slidesPerView: 2
+				},
+				1024: {
+					spaceBetween: 24,
+					slidesPerView: 2
+				},
+				1280: {
+					spaceBetween: 30,
+					slidesPerView: 2
+				}
+			}
+		}
+
+		gallerySliders.push(new Swiper('.gallery_s' + i, options))
+	})
+
+
+	// Documents slider
+	const documentsSliders = [],
+		documents = document.querySelectorAll('.documents .swiper')
+
+	documents.forEach((el, i) => {
+		el.classList.add('documents_s' + i)
+
+		let options = {
+			loop: true,
+			loopAdditionalSlides: 1,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			lazy: true,
+			breakpoints: {
+				0: {
+					spaceBetween: 20,
+					slidesPerView: 2
+				},
+				768: {
+					spaceBetween: 20,
+					slidesPerView: 3
+				},
+				1024: {
+					spaceBetween: 24,
+					slidesPerView: 4
+				},
+				1280: {
+					spaceBetween: 30,
+					slidesPerView: 4
+				}
+			}
+		}
+
+		documentsSliders.push(new Swiper('.documents_s' + i, options))
+	})
+
+
+	// Accordion
+	$('body').on('click', '.accordion .accordion_item .head', function(e) {
+		e.preventDefault()
+
+		let item = $(this).closest('.accordion_item'),
+			accordion = $(this).closest('.accordion')
+
+		if (item.hasClass('active')) {
+			item.removeClass('active').find('.data').slideUp(300)
+		} else {
+			accordion.find('.accordion_item').removeClass('active')
+			accordion.find('.data').slideUp(300)
+
+			item.addClass('active').find('.data').slideDown(300)
+		}
+	})
 
 
 	// Mini popups
@@ -387,7 +490,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			$(".js-color").text(color);
 			$(this).addClass('active')
 			let escapedActiveTab = activeTab.replace(/#/g, '\\#');
-        	$("button[data-content='"+escapedActiveTab+"']").addClass('active'); 
+        	$("button[data-content='"+escapedActiveTab+"']").addClass('active');
 			activeTabContent.addClass('active')
 		}
 	})

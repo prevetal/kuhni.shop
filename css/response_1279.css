@@ -33,6 +33,48 @@
 
 
 
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item
+    {
+        padding-block: var(--cont_padding);
+    }
+
+
+    .accordion_item .head
+    {
+        padding-right: 68px;
+    }
+
+
+    .accordion_item .head .title
+    {
+        font-size: 22px;
+    }
+
+
+    .accordion_item .head .icon
+    {
+        width: 44px;
+        height: 44px;
+    }
+
+
+    .accordion_item .head .icon svg
+    {
+        width: 18px;
+        height: 18px;
+    }
+
+
+    .accordion_item .data
+    {
+        padding-right: 0;
+    }
+
+
+
     /*--------------
         Fancybox
     --------------*/
@@ -129,10 +171,10 @@
 
     header .catalog .mini_modal
     {
-        font-size: 18px;
-
         width: 280px;
         padding: var(--cont_padding);
+
+        font-size: 18px;
     }
 
 
@@ -254,25 +296,25 @@
     ------------------*/
     .form .label
     {
-        font-size: 13px;
-
         margin-bottom: 8px;
+
+        font-size: 13px;
     }
 
 
     .form .input
     {
-        font-size: var(--font_size);
-
         height: 44px;
+
+        font-size: var(--font_size);
     }
 
 
     .form .nice-select .current
     {
-        font-size: var(--font_size);
-
         height: 44px;
+
+        font-size: var(--font_size);
     }
 
 
@@ -331,9 +373,9 @@
 
     .text_block ol li:before
     {
-        font-size: 13px;
-
         padding: 2px 5px 3px 4px;
+
+        font-size: 13px;
     }
 
 
@@ -346,10 +388,10 @@
 
     .text_block blockquote
     {
-        font-size: 18px;
-
         margin-top: var(--cont_padding);
         margin-bottom: var(--cont_padding);
+
+        font-size: 18px;
     }
 
 
@@ -485,10 +527,10 @@
 
     .steps .item .btn
     {
-        font-size: 14px;
-
         bottom: 20px;
         left: var(--cont_padding);
+
+        font-size: 14px;
     }
 
 
@@ -498,55 +540,81 @@
     -------------------*/
     .contacts_info .data
     {
-        width: calc(50% - var(--cont_padding) / 2);
+        width: calc(100% - 444px);
+
+        gap: var(--cont_padding);
     }
 
 
-    .contacts_info .data .phone a
+    .contacts_info .data .title
+    {
+        margin-bottom: var(--cont_padding);
+    }
+
+
+    .contacts_info .section
+    {
+        padding: var(--cont_padding);
+    }
+
+
+    .contacts_info .item + .item
+    {
+        margin-top: 16px;
+    }
+
+
+    .contacts_info .item.phone a
     {
         font-size: 18px;
     }
 
 
-    .contacts_info .data .order_btn
-    {
-        height: 44px;
-    }
-
-
-    .contacts_info .data .messengers a
+    .contacts_info .item.messengers a
     {
         width: 44px;
         height: 44px;
     }
 
 
-    .contacts_info .data .messengers .tg_link .icon
+    .contacts_info .item.messengers .tg_link .icon
     {
         width: 23px;
         height: 19px;
     }
 
 
-    .contacts_info .data .messengers .whatsapp_link .icon
+    .contacts_info .item.messengers .whatsapp_link .icon
     {
         width: 22px;
         height: 21px;
     }
 
 
-    .contacts_info .virtual_tour
+    .contacts_info .map,
+    .contacts_info .image
     {
-        width: calc(50% - var(--cont_padding) / 2);
-        min-height: 280px;
+        margin-top: var(--cont_padding);
     }
 
 
-    .contacts_info .map
+    .contacts_info .requisites .val
     {
-        width: 100%;
-        min-height: 280px;
-        margin-top: var(--cont_padding);
+        width: calc(100% - 200px);
+        min-width: calc(100% - 200px);
+    }
+
+
+    .contacts_info .feedback
+    {
+        width: 420px;
+        padding: var(--cont_padding);
+    }
+
+
+    .contacts_info .feedback .title
+    {
+        margin-bottom: var(--cont_padding);
     }
 
 
@@ -820,9 +888,9 @@
 
     .articles .article .tag
     {
-        font-size: 13px;
-
         padding: 8px;
+
+        font-size: 13px;
     }
 
 
@@ -834,9 +902,9 @@
 
     .articles .article .info
     {
-        font-size: 13px;
-
         margin-bottom: 12px;
+
+        font-size: 13px;
     }
 
 
@@ -1176,9 +1244,9 @@
     -------------*/
     .filters .btn
     {
-        font-size: 13px;
-
         height: 44px;
+
+        font-size: 13px;
     }
 
 
@@ -1201,9 +1269,9 @@
 
     .filters .mini_modal .title
     {
-        font-size: 18px;
-
         margin-bottom: var(--cont_padding);
+
+        font-size: 18px;
     }
 
 
@@ -1380,9 +1448,9 @@
 
     #filter .name
     {
-        font-size: 18px;
-
         padding: 20px 0;
+
+        font-size: 18px;
     }
 
 
@@ -1579,6 +1647,85 @@
 
 
 
+    /*-------------------
+        About messaeg
+    -------------------*/
+    .about_message .data
+    {
+        padding: var(--cont_padding);
+    }
+
+
+    .about_message .photo
+    {
+        width: 260px;
+        margin-top: 0;
+    }
+
+
+    .about_message .photo + *
+    {
+        width: calc(100% - 300px);
+
+        gap: var(--cont_padding);
+    }
+
+
+    .about_message .text_block > *
+    {
+        margin-bottom: 16px;
+    }
+
+
+    .about_message .author .name
+    {
+        font-size: 18px;
+    }
+
+
+
+    /*-------------
+        Gallery
+    -------------*/
+    .gallery .row
+    {
+        margin-bottom: calc(var(--cont_padding) * -1);
+        margin-left: calc(var(--cont_padding) * -1);
+    }
+
+
+    .gallery .row > *
+    {
+        width: calc(50% - var(--cont_padding));
+        margin-bottom: var(--cont_padding);
+        margin-left: var(--cont_padding);
+    }
+
+
+
+    /*---------------
+        Documents
+    ---------------*/
+    .documents .item
+    {
+        padding-block: var(--cont_padding);
+    }
+
+
+    .documents .item .icon
+    {
+        bottom: var(--cont_padding);
+    }
+
+
+    .documents .item .icon svg
+    {
+        width: 44px;
+        height: 44px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
@@ -1709,11 +1856,13 @@
         width: 220px;
     }
 
-    .slider_with_thumbnail .images .swiper{
-        height:100%;
+    .slider_with_thumbnail .images .swiper
+    {
+        height: 100%;
     }
 
-    .product_info .images .image{
+    .product_info .images .image
+    {
         height: 100%;
     }
 }

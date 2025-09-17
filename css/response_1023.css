@@ -31,6 +31,36 @@
 
 
 
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item .head
+    {
+        padding-right: 60px;
+    }
+
+
+    .accordion_item .head .title
+    {
+        font-size: 18px;
+    }
+
+
+    .accordion_item .head .icon
+    {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .accordion_item .head .icon svg
+    {
+        width: 16px;
+        height: 16px;
+    }
+
+
+
     /*----------------
         Pagination
     ----------------*/
@@ -40,7 +70,8 @@
     }
 
 
-    .pagination .links a, .pagination .links span
+    .pagination .links a,
+    .pagination .links span
     {
         width: 40px;
         height: 40px;
@@ -249,10 +280,10 @@
 
     .steps .item .btn
     {
-        font-size: 13px;
-
         bottom: var(--cont_padding);
         left: var(--cont_padding);
+
+        font-size: 13px;
     }
 
 
@@ -262,47 +293,42 @@
     -------------------*/
     .contacts_info .data
     {
-        gap: 15px;
+        width: 100%;
     }
 
 
-    .contacts_info .data .phone a
+    .contacts_info .item.phone a
     {
         font-size: 16px;
     }
 
 
-    .contacts_info .data .order_btn
-    {
-        height: 40px;
-    }
-
-
-    .contacts_info .data .messengers a
+    .contacts_info .item.messengers a
     {
         width: 40px;
         height: 40px;
     }
 
 
-    .contacts_info .data .messengers .tg_link .icon
+    .contacts_info .item.messengers .tg_link .icon
     {
         width: 21px;
         height: 17px;
     }
 
 
-    .contacts_info .data .messengers .whatsapp_link .icon
+    .contacts_info .item.messengers .whatsapp_link .icon
     {
         width: 20px;
         height: 19px;
     }
 
 
-    .contacts_info .virtual_tour,
-    .contacts_info .map
+
+    .contacts_info .feedback
     {
-        min-height: 248px;
+        width: 100%;
+        margin-top: var(--cont_padding);
     }
 
 
@@ -694,9 +720,9 @@
     -------------*/
     .filters .btn
     {
-        font-size: 12px;
-
         height: 40px;
+
+        font-size: 12px;
     }
 
 
@@ -770,9 +796,9 @@
 
     .categories .category .price .btn
     {
-        font-size: 10px;
-
         width: 101px;
+
+        font-size: 10px;
 
         text-align: center;
     }
@@ -824,9 +850,9 @@
 
     #filter .name
     {
-        font-size: 16px;
-
         padding: 16px 0;
+
+        font-size: 16px;
     }
 
 
@@ -908,6 +934,24 @@
 
 
 
+    /*-------------------
+        About messaeg
+    -------------------*/
+    .about_message .photo
+    {
+        width: 220px;
+        margin-inline: auto;
+        margin-bottom: var(--cont_padding);
+    }
+
+
+    .about_message .photo + *
+    {
+        width: 100%;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
@@ -963,11 +1007,13 @@
         margin-bottom: var(--cont_padding);
     }
 
-    .slider_with_thumbnail .thumbs{
+    .slider_with_thumbnail .thumbs
+    {
         display: none;
     }
 
-    .filters .btns .reset_btn{
+    .filters .btns .reset_btn
+    {
         height: 40px;
     }
 }

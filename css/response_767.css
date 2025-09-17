@@ -54,7 +54,8 @@
     /*----------------
         Pagination
     ----------------*/
-    .pagination .links a, .pagination .links span
+    .pagination .links a,
+    .pagination .links span
     {
         width: 32px;
         height: 32px;
@@ -254,34 +255,10 @@
     /*-------------------
         Contacts info
     -------------------*/
-    .contacts_info .data
+    .contacts_info .requisites .val
     {
-        width: 100%;
-    }
-
-
-    .contacts_info .data .order_btn
-    {
-        width: 100%;
-    }
-
-
-    .contacts_info .virtual_tour
-    {
-        width: 100%;
-        margin-top: var(--cont_padding);
-    }
-
-
-    .contacts_info .virtual_tour .btn,
-    .contacts_info .map .btn
-    {
-        font-size: 13px;
-
-        bottom: 16px;
-        left: 16px;
-
-        height: 36px;
+        width: calc(100% - 160px);
+        min-width: calc(100% - 160px);
     }
 
 
@@ -679,6 +656,45 @@
 
 
 
+    /*-------------------
+        About messaeg
+    -------------------*/
+    .about_message .photo
+    {
+        width: 180px;
+    }
+
+
+    .about_message .author
+    {
+        gap: 4px;
+    }
+
+
+    .about_message .author .name
+    {
+        font-size: 16px;
+    }
+
+
+
+    /*-------------
+        Gallery
+    -------------*/
+    .gallery .row
+    {
+        margin-left: 0;
+    }
+
+
+    .gallery .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
@@ -760,10 +776,10 @@
 
     footer .bottom
     {
+        flex-direction: column;
+
         font-size: 10px;
         line-height: 140%;
-
-        flex-direction: column;
 
         gap: calc(var(--cont_padding) / 2);
     }
